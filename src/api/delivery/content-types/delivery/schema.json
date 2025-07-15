@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliveries",
+  "info": {
+    "singularName": "delivery",
+    "pluralName": "deliveries",
+    "displayName": "delivery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "fromAddress": {
+      "type": "string"
+    },
+    "toAddress": {
+      "type": "string"
+    },
+    "startPickupDateTime": {
+      "type": "datetime"
+    },
+    "endPickupDateTime": {
+      "type": "datetime"
+    },
+    "size": {
+      "type": "string"
+    },
+    "toCenter": {
+      "type": "enumeration",
+      "enum": [
+        "Halifax Community Fridge",
+        "Darthmouth Community Fridge",
+        "Veith House",
+        "Others"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "reqRiders": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "claimed_deliveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::claimed-delivery.claimed-delivery",
+      "mappedBy": "delivery"
+    }
+  }
+}

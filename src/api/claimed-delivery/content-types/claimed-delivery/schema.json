@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claimed_deliveries",
+  "info": {
+    "singularName": "claimed-delivery",
+    "pluralName": "claimed-deliveries",
+    "displayName": "Claimed Delivery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "rider",
+        "buddy",
+        "backup"
+      ],
+      "default": "rider"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "claimed_deliveries"
+    },
+    "delivery": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::delivery.delivery",
+      "inversedBy": "claimed_deliveries"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

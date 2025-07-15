@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_content_lists",
+  "info": {
+    "displayName": "Content List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "headlineAlignment": {
+      "type": "enumeration",
+      "enum": [
+        "center",
+        "right",
+        "left"
+      ],
+      "default": "left"
+    },
+    "showSearch": {
+      "type": "boolean"
+    },
+    "showPagination": {
+      "type": "boolean"
+    },
+    "query": {
+      "type": "string"
+    },
+    "comp": {
+      "type": "enumeration",
+      "enum": [
+        "BlogCard",
+        "EventCard",
+        "DeliveryCard"
+      ],
+      "default": "BlogCard"
+    },
+    "page": {
+      "type": "string"
+    }
+  }
+}
