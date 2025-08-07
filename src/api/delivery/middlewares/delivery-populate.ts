@@ -18,6 +18,7 @@ const populate = {
     },
     fields: ["documentId", "type", "notes"],
   },
+  image: { fields: ["url", "alternativeText"] },
 };
 // prettier-ignore
 const fields = ['documentId', 'title', 'description', 
